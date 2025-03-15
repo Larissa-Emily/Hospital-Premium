@@ -1,0 +1,631 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* Inicialmente escondidos */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); /* Move para baixo */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Quando entra na tela */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilização do Header */
+.header {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  padding: 58px 145px 10px 145px;
+  position: fixed;
+  z-index: 999;
+}
+
+/* Estilização do logo */
+.logo img {
+  height: 56px;
+}
+
+/* Estilização do menu de navegação */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 110px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 95px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #807d9a;
+}
+
+.nav-item a:hover{
+  color: #521a9e;
+}
+
+/* Estilização da área de login */
+.register {
+  display: flex;
+  align-items: baseline;
+  gap: 45px;
+}
+
+.login {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.login img {
+  width: 20px;
+  padding-top: 10px;
+}
+
+.login h3 p {
+  color: #521a9e;
+  font-size: 20px;
+}
+
+/* Estilização do botão Sign Up */
+.btn-sign button {
+  width: 160px;
+  border: 1px solid #a7a7a74b;
+  background-color: transparent;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #1d76ff;
+  text-transform: capitalize;
+  transition: 0.5s ease-in-out;
+}
+
+.btn-sign button:hover {
+  background-color: #1d76ff;
+  color: #fff;
+}
+
+/* Seção principal */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 15em 0 50px 150px; /* Mantém padding nas laterais, exceto na direita */
+}
+
+.hero-content h1 {
+  width: 500px;
+  margin-bottom: 0.8em;
+  margin-top: 0.5em;
+  text-transform: capitalize;
+  font-size: 5em;
+  font-weight: 600;
+  color: #521a9e;
+  line-height: 1.3em;
+}
+
+.hero-content p {
+  width: 550px;
+  font-size: 1.5em;
+  color: #807d9a;
+}
+
+.hero-content p:last-of-type {
+  padding-bottom: 2em; /* Define um padding apenas no último <p> */
+}
+
+.btn-primary {
+  width: 214px;
+  height: 69px;
+  background: linear-gradient(90deg, #547ff2, #27e0fc);
+  color: white;
+  padding: 20px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Ajuste da imagem */
+.hero-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Seção de content */
+
+.steps-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps-content header {
+  padding: 8em 0px 12em 0;
+}
+
+.steps-content header .all-bars {
+  width: 195px;
+  height: 18px;
+}
+
+.steps-content header h1 {
+  margin-top: 1.5em;
+  font-size: 3.5em;
+  color: #521a9e;
+}
+
+.steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.steps-container .step-box {
+  width: 400px;
+  text-align: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.steps-container .step-box h2 {
+  color: #521a9e;
+  font-size: 32px;
+  padding: 1.5em 3em;
+}
+
+.steps-container .step-box p {
+  color: #807d9a;
+  padding: 1.5em 2.3em;
+  font-size: 1.4em;
+}
+
+/* Seção de sobre */
+
+.about-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10em;
+}
+
+.about-banner img {
+  width: 852px;
+  height: 1078px;
+  object-fit: cover;
+}
+
+.about-text {
+  width: 100%;
+  padding-top: 6em;
+}
+
+.about-text header {
+  padding-bottom: 3.5em;
+}
+
+.about-text header .all-bars {
+  width: 195px;
+  height: 18px;
+}
+
+.about-text .description {
+  padding: 70px 0px 55px 0;
+}
+
+.about-text p {
+  width: 852px;
+  font-size: 34px;
+  color: #807d9a;
+}
+
+@media(max-width: 1700px){
+  .about-text .description p{
+    width: 700px;
+    font-size: 24px;
+  }
+
+  
+}
+
+@media(max-width: 1570px){
+  .about-content{
+    flex-direction: column;
+  }
+  .about-banner img {
+    max-width: auto;
+  }
+}
+
+
+.about-text span {
+  display: block;
+  padding-bottom: 70px;
+  color: #807d9a;
+  font-size: 34px;
+}
+
+.about-text .about-link {
+  text-decoration: none;
+  color: #2578fa;
+  font-weight: bold;
+  font-size: 34px;
+}
+
+/* Seção de segurança */
+
+.security-section {
+  padding-left: 15em;
+  position: relative; /* Define um contexto para a imagem */
+  z-index: 1; /* Garante que este elemento fique acima da seção anterior, se necessário */
+  padding-top: 120px; /* Adapte este valor para dar mais espaço se precisar ajustar */
+}
+
+.security-image img {
+  width: 100%;
+  height: 1240px;
+  object-fit: cover;
+}
+
+.security-header {
+  padding-top: 23em;
+}
+
+.security-header img {
+  padding-bottom: 6em;
+}
+
+.security-header h1 {
+  font-size: 2.8em;
+  width: 440px;
+  line-height: 1.2em;
+  color: #521a9e;
+}
+
+.security-content {
+  position: relative; /* Referência para posicionamento absoluto */
+  display: flex; /* Mantém a organização dos elementos */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: space-between; /* Mantém espaçamento */
+}
+
+.security-content .security-text {
+  width: 52%;
+  padding-top: 4em;
+  color: #807d9a;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+.security-text p:last-of-type {
+  padding-bottom: 1em; /* Define um padding apenas no último <p> */
+}
+
+.security-emphasis {
+  color: #521a9e;
+  position: relative; /* Necessário para posicionar o ::after */
+  font-weight: bold; /* Deixa o destaque mais evidente */
+  text-decoration: none; /* Remove sublinhado padrão */
+  padding-bottom: 10px; /* Espaço para a borda-imagem */
+}
+
+.security-emphasis::after {
+  content: ""; /* Necessário para pseudo-elementos */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Faz a imagem cobrir a largura do texto */
+  height: 8px; /* Altura da "borda" (ajuste conforme necessário) */
+  background-image: url("./assets/images/linha-reta-teste-programador.png.jpg"); /* Substitua pelo caminho da sua imagem */
+  background-size: contain; /* Garante que a imagem fique ajustada */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+}
+
+.security-text .btn-link {
+  color: #1d76ff;
+}
+
+.security-image {
+  position: absolute; /* Permite sobrepor outros elementos */
+  right: -32%; /* Ajuste conforme necessário para mover a imagem */
+  bottom: 10%; /* Move a imagem para "invadir" a seção anterior (`.about-section`) */
+  width: 80%; /* Ajuste conforme o tamanho ideal */
+  z-index: -1; /* Mantém a imagem acima do texto */
+}
+
+.security-image img {
+  width: 60%; /* Ajusta a largura da imagem dentro do container */
+  height: 40%; /* Mantém a proporção */
+}
+
+@media(max-width:1024px){
+  .security-image{
+    display: none;
+  }
+}
+
+.app-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./assets/images/img-fundo-4-teste-programador.png);
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+.app-text {
+  width: 50%;
+}
+
+.app-text .line {
+  width: 195px;
+  height: 18px;
+  display: flex;
+}
+
+.app-text .line .dark-gray {
+  width: 60px;
+  height: 18px;
+  background: #e3e0ff;
+}
+.app-text .line .ligth-gray {
+  width: 100%;
+  height: 18px;
+  background: #fff;
+}
+
+.app-text h1 {
+  width: 770px;
+  font-size: 2.8em;
+  line-height: 1.5em;
+  color: #521a9e;
+  padding: 1.5em 0;
+}
+
+.box-content {
+  width: 50%;
+  display: flex;
+  gap: 3.5em;
+}
+
+.box-black {
+  display: flex;
+  align-items: center;
+  width: 262px;
+  height: 75px;
+  padding: 15px 10px;
+  background: #000;
+  color: #fff;
+  margin: 10px;
+  gap: 28px;
+  border-radius: 8px;
+}
+
+.box-black h3 {
+  font-size: 1em;
+}
+
+.box-black h2 {
+  font-size: 1.8em;
+}
+
+.box-black img {
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.box-black .triangle img {
+  margin-bottom: 16px;
+  width: 50px;
+  transform: rotate(55deg);
+}
+
+.box-black .icon img {
+  width: 40px;
+}
+
+
+@media(max-width:1024px){
+  .app-text{
+    width: 100%;
+    align-items: center;
+  }
+  .box-content{
+    width: 100%;
+  }
+}
+
+/* Seção de registro */
+
+.register-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 120px 60px 165px 60px;
+}
+
+.box-drive,
+.box-start {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-around; /* Espaçamento horizontal */
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5em; /* Define a distância entre o texto e a linha */
+}
+
+.box-drive h1,
+.box-start h1 {
+  width: 450px;
+  font-size: 54px;
+  font-weight: normal;
+  text-align: left;
+  color: #521a9e;
+}
+
+.box-drive .arrow,
+.box-start .arrow {
+  display: flex;
+  align-items: center; /* Alinha a seta com o texto */
+  justify-content: center;
+}
+
+.arrow img {
+  width: 80px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+}
+.box-drive div img:first-of-type,
+.box-start div img:first-of-type {
+  align-self: flex-start; /* Garante que a linha fique à esquerda */
+}
+
+@media (max-width: 768px) {
+  .box-drive,
+  .box-start {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Seção do rodape */
+
+.footer {
+  width: 100%;
+  height: 95vh;
+  background-image: url(./assets/images/fundo-footer-teste-programador.png.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding-top: 10em;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around; /* Alinha os elementos à esquerda e mantém espaçamento */
+  flex-wrap: wrap;
+  margin: 0 auto; /* Centraliza na tela */
+}
+
+.footer-logo {
+  line-height: 5em;
+}
+
+.footer-logo h2 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.footer-logo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-logo ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-logo ul li span {
+  font-size: 1.3em;
+}
+
+.footer-logo ul li i {
+  font-size: 1.8em;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15em; /* Ajustado para garantir um espaçamento melhor */
+}
+
+.footer-column h3 {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 35px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  line-height: 3em;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.footer-column ul li:hover{
+  border-bottom: 1px solid #807d9a;
+}
+
+/* ==== Correção no footer-bottom ==== */
+.footer-bottom {
+  width: 75%;
+  display: flex;
+  justify-content: space-between; /* Garante alinhamento semelhante */
+  align-items: center;
+  margin: 40px auto 0; /* Centraliza e mantém espaçamento */
+  padding-top: 40px;
+  border-top: 1px solid #ffffff4d;
+}
+
+.footer-bottom p {
+  font-size: 1.2em;
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px; /* Mantém os ícones com distância regular */
+}
+
+.social-icons i {
+  width: 34px;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #27e0fc;
+}
